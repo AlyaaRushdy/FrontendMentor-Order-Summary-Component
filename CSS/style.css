@@ -1,3 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+/* || VARIABLES */
+:root {
+  /* || COLORS */
+  --background-pale-blue: hsl(225, 100%, 94%);
+  --primary-bright-blue: hsl(245, 75%, 52%);
+  --cardBG-very-pale-blue: hsl(225, 100%, 98%);
+  --text-desaturated-blue: hsl(224, 23%, 55%);
+  --headings-dark-blue: hsl(223, 47%, 23%);
+  --footer-link: hsl(228, 45%, 44%);
+
+  /* || TYPOGRAPHY */
+  --font-family: "Red Hat Display", sans-serif;
+  --medium-font-weight: 500;
+  --bold-font-weight: 700;
+  --vbold-font-weight: 900;
+}
+
+/* || RESET */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+img {
+  display: block;
+  width: auto;
+  height: auto;
+}
+/* || UTILITY CLASSES */
+.no-decoration {
+  text-decoration: none;
+}
+
 /* Footer Styling */
 .footer {
   position: absolute;
