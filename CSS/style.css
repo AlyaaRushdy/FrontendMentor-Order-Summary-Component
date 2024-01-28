@@ -1,20 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
-/* || VARIABLES */
-:root {
-  /* || COLORS */
-  --background-pale-blue: hsl(225, 100%, 94%);
-  --primary-bright-blue: hsl(245, 75%, 52%);
-  --cardBG-very-pale-blue: hsl(225, 100%, 98%);
-  --text-desaturated-blue: hsl(224, 23%, 55%);
-  --headings-dark-blue: hsl(223, 47%, 23%);
-  --footer-link: hsl(228, 45%, 44%);
-
-  /* || TYPOGRAPHY */
-  --font-family: "Red Hat Display", sans-serif;
-  --medium-font-weight: 500;
-  --bold-font-weight: 700;
-  --vbold-font-weight: 900;
-}
 
 /* || RESET */
 * {
@@ -24,11 +8,97 @@
 }
 img {
   display: block;
-  width: auto;
+  width: 100%;
   height: auto;
 }
+
+/* || VARIABLES */
+:root {
+  /* || COLORS */
+  --background-pale-blue: hsl(225, 100%, 94%);
+  --primary-bright-blue: hsl(245, 75%, 52%);
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --text-desaturated-blue: hsl(224, 23%, 55%);
+  --headings-dark-blue: hsl(223, 47%, 23%);
+  --footer-link: hsl(228, 45%, 44%);
+
+  /* || TYPOGRAPHY */
+  --font-size: 16px;
+  --font-family: "Red Hat Display", sans-serif;
+  --medium-font-weight: 500;
+  --bold-font-weight: 700;
+  --vbold-font-weight: 900;
+}
+
 /* || UTILITY CLASSES */
 .no-decoration {
+  text-decoration: none;
+}
+
+/* || General Styling */
+body {
+  min-height: 100vh;
+  background: url(../images/pattern-background-desktop.svg) no-repeat,
+    var(--background-pale-blue);
+  background-size: cover;
+
+  font: var(--medium-font-weight) var(--font-size) var(--font-family);
+  text-align: center;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 25rem;
+  color: var(--text-desaturated-blue);
+  background-color: white;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.card__article {
+  margin-top: 2rem;
+  padding: 1rem;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+.card__h1 {
+  color: var(--headings-dark-blue);
+  font-weight: var(--vbold-font-weight);
+}
+/* Payment Section */
+.card__section--payment {
+  width: 100%;
+  background-color: var(--very-pale-blue);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-self: flex-start;
+  text-align: left;
+  gap: 1rem;
+}
+.payment__img {
+  width: auto;
+}
+.payment__h2 {
+  color: var(--headings-dark-blue);
+  font-size: 1.25em;
+  font-weight: var(--bold-font-weight);
+}
+.payment__a {
+  color: var(--primary-bright-blue);
+  margin-left: auto;
+}
+.payment__a:hover {
+  color: var(--text-desaturated-blue);
   text-decoration: none;
 }
 
