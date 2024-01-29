@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
-
 /* || RESET */
 * {
   padding: 0;
@@ -52,24 +51,26 @@ body {
 }
 
 .card {
-  width: 25rem;
+  width: clamp(19rem, 85vw, 25rem); /* 21rem */
   color: var(--text-desaturated-blue);
   background-color: white;
   border-radius: 1rem;
   overflow: hidden;
 }
 .card__article {
-  margin-top: 2rem;
-  padding: 1rem;
+  margin: 0.5rem 0;
+  padding: 1.5rem;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
   gap: 1.5rem;
 }
 .card__h1 {
+  font-size: 22px;
   color: var(--headings-dark-blue);
   font-weight: var(--vbold-font-weight);
+}
+.card__p--desc {
+  line-height: 1.5;
 }
 /* Payment Section */
 .card__section--payment {
@@ -90,18 +91,41 @@ body {
 }
 .payment__h2 {
   color: var(--headings-dark-blue);
-  font-size: 1.25em;
+  font-size: 1em;
   font-weight: var(--bold-font-weight);
 }
 .payment__a {
+  font-size: 0.9em;
+  font-weight: var(--bold-font-weight);
   color: var(--primary-bright-blue);
   margin-left: auto;
 }
-.payment__a:hover {
+.payment__a:hover,
+.payment__a:focus {
   color: var(--text-desaturated-blue);
   text-decoration: none;
 }
 
+.card__a--pay {
+  width: 100%;
+  color: white;
+  background-color: var(--primary-bright-blue);
+  font-weight: var(--bold-font-weight);
+  padding: 1rem;
+  border-radius: 10px;
+}
+.card__a--pay:hover,
+.card__a--pay:focus {
+  background-color: var(--text-desaturated-blue);
+}
+.card__a--cancel {
+  color: inherit;
+  font-weight: var(--bold-font-weight);
+}
+.card__a--cancel:hover,
+.card__a--cancel:focus {
+  color: var(--headings-dark-blue);
+}
 /* Footer Styling */
 .footer {
   position: absolute;
