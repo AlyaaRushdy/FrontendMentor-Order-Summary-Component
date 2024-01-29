@@ -39,7 +39,7 @@ body {
   min-height: 100vh;
   background: url(../images/pattern-background-desktop.svg) no-repeat,
     var(--background-pale-blue);
-  background-size: cover;
+  /* background-size: cover; */
 
   font: var(--medium-font-weight) var(--font-size) var(--font-family);
   text-align: center;
